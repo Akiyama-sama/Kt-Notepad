@@ -88,7 +88,7 @@ class PreferenceManager private constructor(
     val sortOrder get() = Prefs.SortBy.mapToFlow(::toSortOrder)
     val filenameFormat get() = Prefs.ExportFilename.mapToFlow(::toFilenameFormat)
     val showDialogs get() = Prefs.ShowDialogs.asFlow
-    val showDate get() = Prefs.ShowDate.asFlow
+
     val directEdit get() = Prefs.DirectEdit.asFlow
     val markdown get() = Prefs.Markdown.asFlow
     val rtlLayout get() = Prefs.RtlSupport.asFlow

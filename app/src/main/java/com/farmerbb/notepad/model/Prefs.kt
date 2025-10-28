@@ -28,7 +28,7 @@ object PrefKeys {
     val SortBy = stringPreferencesKey("sort_by")
     val ExportFilename = stringPreferencesKey("export_filename")
     val ShowDialogs = booleanPreferencesKey("show_dialogs")
-    val ShowDate = booleanPreferencesKey("show_date")
+
     val DirectEdit = booleanPreferencesKey("direct_edit")
     val Markdown = booleanPreferencesKey("markdown")
     val RtlSupport = booleanPreferencesKey("rtl_layout")
@@ -74,10 +74,7 @@ object Prefs {
         defaultValue = false
     )
 
-    object ShowDate: PreferenceRequest<Boolean>(
-        key = PrefKeys.ShowDate,
-        defaultValue = false
-    )
+
 
     object DirectEdit: PreferenceRequest<Boolean>(
         key = PrefKeys.DirectEdit,

@@ -150,7 +150,7 @@ private fun NotepadComposeApp(
     val textFontSize by vm.prefs.textFontSize.collectAsState()
     val dateFontSize by vm.prefs.dateFontSize.collectAsState()
     val fontFamily by vm.prefs.fontFamily.collectAsState()
-    val showDate by vm.prefs.showDate.collectAsState()
+
     val markdown by vm.prefs.markdown.collectAsState()
     val directEdit by vm.prefs.directEdit.collectAsState()
     val filenameFormat by vm.prefs.filenameFormat.collectAsState()
@@ -397,7 +397,6 @@ private fun NotepadComposeApp(
         foundNotes = foundNotes,
         textStyle = textStyle,
         dateStyle = dateStyle,
-        showDate = showDate,
         rtlLayout = rtlLayout,
         onNoteLongClick = { id ->
             haptics.performHapticFeedback(HapticFeedbackType.LongPress)

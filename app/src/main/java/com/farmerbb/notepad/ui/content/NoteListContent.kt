@@ -88,7 +88,6 @@ fun NoteListContent(
     foundNotes: Map<Long, Boolean> = emptyMap(),
     textStyle: TextStyle = TextStyle(),
     dateStyle: TextStyle = TextStyle(),
-    showDate: Boolean = false,
     rtlLayout: Boolean = false,
     onNoteLongClick: (Long) -> Unit = {},
     onNoteClick: (Long) -> Unit = {}
@@ -136,27 +135,24 @@ fun NoteListContent(
                                 .padding(
                                     start = 16.dp,
                                     end = 16.dp,
-                                    top = if (showDate) 8.dp else 12.dp,
-                                    bottom = if (showDate) 0.dp else 12.dp
+                                    top = 8.dp
                                 )
                         )
                     }
 
-                    if (showDate) {
-                        BasicText(
-                            text = note.date.noteListFormat,
-                            style = dateStyle,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier
-                                .align(Alignment.End)
-                                .padding(
-                                    start = 16.dp,
-                                    end = 16.dp,
-                                    bottom = 8.dp
-                                )
-                        )
-                    }
+                    BasicText(
+                        text = note.date.noteListFormat,
+                        style = dateStyle,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier
+                            .align(Alignment.End)
+                            .padding(
+                                start = 16.dp,
+                                end = 16.dp,
+                                bottom = 8.dp
+                            )
+                    )
 
                     Divider()
                 }

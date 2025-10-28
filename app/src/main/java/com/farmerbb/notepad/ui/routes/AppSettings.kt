@@ -110,11 +110,7 @@ fun NotepadPreferenceScreen(
                 title = stringResource(id = R.string.pref_title_show_dialogs),
                 singleLineTitle = false
             ),
-            SwitchPreference(
-                request = Prefs.ShowDate,
-                title = stringResource(id = R.string.pref_title_show_date),
-                singleLineTitle = false
-            ),
+
             SwitchPreference(
                 request = Prefs.DirectEdit,
                 title = stringResource(id = R.string.pref_title_direct_edit),
